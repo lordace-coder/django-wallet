@@ -75,7 +75,7 @@ class Wallet(models.Model):
 
 class Transaction(models.Model):
     # The wallet that holds this transaction.
-    wallet = models.ForeignKey(Wallet on_delete = models.CASACADE)
+    wallet = models.ForeignKey(Wallet, on_delete = models.CASACADE)
 
     # The value of this transaction.
     value = CURRENCY_STORE_FIELD(default=0)
